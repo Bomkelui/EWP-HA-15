@@ -1,0 +1,24 @@
+{
+    "data": [
+		[
+        "git clone",
+        "Das Repository wird ohne Veränderungen kopiert. Das bedeutet eins zu eins geklont."
+         ],
+		[
+        "git add",
+        "Es wird eine Änderung im Projekt hinzugefügt, aber noch nicht zwischengespeichert."
+         ],
+		[
+        "git commit",
+        "Änderungen aus dem Befehl git add werden in der DB .git gespeichert. Es wird ein Zwischenstatus erstellt, der später wieder abgerufen werden kann."
+         ],
+		 [
+        "git push",
+        "In Verbindung mit dem Befehl origin master werden die gespeicherten Änderungen in das ursprüngliche Repository hochgeladen."
+         ],
+		 [
+        "git pull",
+        "Es werden aktuelle Änderungen im Projekt geholt und lokale Kopien aktualisiert."
+         ]
+	]
+}

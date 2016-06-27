@@ -1,0 +1,14 @@
+html, body {
+	background: #ebebeb;
+}
+
+#bild  {
+	border-style: outset;
+	}
+
+#tool {
+	font-family: Cambria, serif;
+	font-size: 16px;
+	color: #161616;
+	font-style: italic;
+}

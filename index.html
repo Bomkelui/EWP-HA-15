@@ -2,11 +2,65 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.css">
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
     <title>EWP HA 15</title>
 </head>
 <body>
 
 <!-- TODO: Erstellen Sie hier die nötigen Inhalte -->
+<a href="https://github.com/Bomkelui/EWP-HA-15">
+		<img id="bild" src="data:image/png;base64,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"/>
+		</a>
 
+<h3>git-Workflow</h3>
+<ul>
+	<li id="tool" title="git clone" class="tooltip">clonen</li>
+</ul>
+<p>Um an einem Projekt weiter zu arbeiten, dass via Git in einem Repository gespeichert ist, ist es zuerst notwendig mit dem Befehl git clone das Repository auf den eigenen Rechner zu clonen</p>
+<p>Das bedeutet, dass das Repository ohne Veränderungen kopiert wird (1:1 geklont).</p>
+
+<ul>
+	<li id="tool" title="git add" class="tooltip">neue Änderungen hinzuzufügen</li>
+</ul>
+<p>Um dem Projekt neue Änderungen hinzuzufügen, wird der Befehl git add verwendet.</p>
+
+
+<ul>
+	<li id="tool" title="git commit" class="tooltip">Zwischenspeicherung</li>
+</ul>
+<p>Die Änderungen via git add werden nicht zwischengespeichert.</p>
+<p>Eine Zwischenspeicherung der Änderungen wird erst mit dem Befehl git commit durchgeführt.</p>
+<p>Die Zwischenspeicherung erfolgt in einer zentralen Datenbank (.git). Dieser Zwischenstatus kann später wieder aufgerufen werden.</p>
+
+<ul>
+	<li id="tool" title="git push" class="tooltip">Änderungen hochladen</li>
+</ul>
+<p>Mit dem Befehl git push, in Verbindung mit dem Befehl "origin master", werden die gespeicherten Änderungen in das ursprüngliche Repository hochgeladen.</p>
+
+
+<ul>
+	<li id="tool" title="git pull" class="tooltip">lokale Kopien aktualisiert</li>
+</ul>
+<p>Über den Befehl git pull werden aktuelle Änderungen im Projekt geholt und lokale Kopien aktualisiert.</p>
+
+<br>
+<table id="git">
+	<thead id="head">
+		<tr>
+			<th>Befehl</th>
+			<th>Was passiert</th>
+		</tr>
+	</thead>
+</table>
+<br>
+<br>
+
+
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js"></script>
+	<script src="git.js"></script>
 </body>
 </html>
